@@ -68,7 +68,7 @@ export default function Home() {
             type="submit"
             className="mt-4 w-full bg-white text-primary font-semibold py-2 px-4 rounded-lg hover:bg-opacity-90 transition duration-300"
           >
-            Add Item
+            <span className="text-primary">Add Item</span>
           </button>
         </form>
         <h2 className="text-2xl font-semibold mb-4">Items:</h2>
