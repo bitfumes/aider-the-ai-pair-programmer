@@ -2,8 +2,21 @@ version: '3'
 
 services:
   fastapi_app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.fastapi
     ports:
       - "8000:8000"
     volumes:
       - .:/app
+
+  nextjs_app:
+    build:
+      context: .
+      dockerfile: Dockerfile.nextjs
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      - fastapi_app
